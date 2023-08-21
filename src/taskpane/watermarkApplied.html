@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Watermark Applied</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #0078D4;
+        }
+        p {
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0078D4;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Watermark Applied</h1>
+    <p>The watermark has been successfully applied to the selected slides.</p>
+    <button id="close-dialog">Close</button>
+
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script>
+        document.getElementById("close-dialog").addEventListener("click", function () {
+            Office.context.ui.messageParent("dialog_closed");
+        });
+    </script>
+</body>
+</html>

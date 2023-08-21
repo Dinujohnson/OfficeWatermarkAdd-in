@@ -1,0 +1,142 @@
+/* Reset some default styles */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling for the entire page */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.ms-welcome__header {
+  text-align: center;
+  padding: 20px;
+}
+
+.ms-font-su {
+  font-size: 24px;
+  color: #333;
+}
+
+.ms-welcome__main {
+  padding: 20px;
+}
+
+/* Form container */
+.form-container {
+  width: 100%;
+  padding: 0 20px; /* Add 20px gap on both sides */
+  box-sizing: border-box;
+}
+
+/* Form group */
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.form-group-watermark-txtarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:start;
+  margin: 20px 0px;
+}
+.form-group-watermark-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 20px;
+}
+.form-group-rotation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.dial-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.dial {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: lightgray;
+  position: absolute;
+  transform: rotate(0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dial-marker {
+  width: 2px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center bottom;
+  transform: translateX(-50%) translateY(-100%) rotate(0deg);
+}
+
+/*.rotation-degree-output {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%) translateY(-100%) rotate(45deg);
+  font-size: 14px;
+}*/
+.rotation-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+
+.ms-TextField-field.textarea {
+  width: 100%; /* Set the textarea width to 100% */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+/* Apply button styling */
+#apply-settings {
+  background-color: #0078d4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+#apply-settings:hover {
+  background-color: #005a9e;
+}
+
+/* Left-align input elements */
+.ms-TextField-field,
+.ms-ComboBox-select,
+.ms-Slider-slider,
+.ms-ColorPicker-field {
+  text-align: left;
+}

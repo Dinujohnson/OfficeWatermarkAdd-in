@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Watermark Add-in</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link rel="stylesheet"
+        href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css" />
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <main id="app-body" class="ms-welcome__main" style="display: none;">
+        <div class="form-container">
+            <div class="form-group-watermark-column">
+                <label class="ms-Label">Watermark Text</label>
+                <textarea id="watermark-text" class="ms-TextField-field textarea"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="ms-Label">Font</label>
+                <select id="font-select" class="ms-ComboBox-select">
+                    <option value="Arial">Arial</option>
+                    <option value="Calibri">Calibri</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <!-- Add more font options -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="ms-Label">Font Size</label>
+                <input type="range" id="font-size" min="10" max="150" step="1" class="ms-Slider-slider" />
+                <output id="font-size-output">20</output>
+            </div>
+            <div class="form-group">
+                <label class="ms-Label">Color</label>
+                <input type="color" id="font-color" class="ms-ColorPicker-field" />
+            </div>
+            <div class="form-group-rotation">
+                <div class="rotation-control">
+                    <label class="ms-Label">Rotation Degree</label>
+                    <input type="number" id="rotation-degree" class="ms-TextField-field" min="0" max="360" step="1"
+                        value="0" />
+                </div>                
+                <div class="dial-container">
+                    <div id="dial" class="dial">
+                        <!-- <output id="rotation-degree-output" class="rotation-degree-output">0</output> -->
+                    </div>
+                    <div id="dial-marker" class="dial-marker"></div>
+                </div>
+
+            </div>
+            <button id="apply-settings">Apply</button>
+        </div>
+    </main>
+</body>
+
+</html>
